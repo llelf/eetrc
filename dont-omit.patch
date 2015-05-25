@@ -1,0 +1,22 @@
+--- erts/emulator/Makefile.in.orig  2011-10-03 13:12:07.000000000 -0500
++++ erts/emulator/Makefile.in   2012-04-25 12:28:07.000000000 -0500
+@@ -50,7 +50,7 @@
+ 
+ LDFLAGS=@LDFLAGS@
+ ARFLAGS=rc
+-OMIT_OMIT_FP=no
++OMIT_OMIT_FP=yes
+ 
+ ifeq ($(TYPE),debug)
+ PURIFY =
+--- erts/lib_src/Makefile.in.orig   2011-10-03 13:12:07.000000000 -0500
++++ erts/lib_src/Makefile.in    2012-04-25 12:28:13.000000000 -0500
+@@ -20,7 +20,7 @@
+ include $(ERL_TOP)/make/target.mk
+ include ../include/internal/$(TARGET)/ethread.mk
+
+-OMIT_OMIT_FP=no
++OMIT_OMIT_FP=yes
+
+
+ CC=@CC@
